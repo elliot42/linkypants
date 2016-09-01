@@ -47,7 +47,7 @@ object IndexHandler {
   }
 }
 
-object Wingnut {
+object Linkypants {
   def main(argv: Array[String]) {
     val s = new JettyServer(8080, IndexHandler.handler)
     s.start
