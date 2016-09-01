@@ -2,14 +2,14 @@ package siesta.http
 
 import javax.servlet.http.Cookie
 
-sealed trait HttpMethod
-object HttpMethod {
-  case object GET extends HttpMethod
-  case object PUT extends HttpMethod
-  case object POST extends HttpMethod
-  case object DELETE extends HttpMethod
+sealed trait Method
+object Method {
+  case object GET extends Method
+  case object PUT extends Method
+  case object POST extends Method
+  case object DELETE extends Method
 
-  def fromString(str : String) : Option[HttpMethod] = {
+  def fromString(str : String) : Option[Method] = {
     str.toLowerCase match {
       case "get" => Some(GET)
       case "put" => Some(PUT)
@@ -26,7 +26,7 @@ case class ContentType(contentType: String) extends Header
 
 case class Request(
   cookies: Array[Cookie],
-  method: HttpMethod,
+  method: Method,
   body: String)
 
 case class Response(

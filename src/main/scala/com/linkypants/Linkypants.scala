@@ -4,7 +4,7 @@ import com.typesafe.scalalogging.Logger
 import org.slf4j.LoggerFactory
 
 import siesta.http._
-import siesta.http.HttpMethod
+import siesta.http.Method
 import siesta.jetty.JettyServer
 
 import com.linkypants.view
@@ -40,8 +40,8 @@ object Handler {
 
   def shmucker(r: Request): Response = {
     r.method match {
-      case HttpMethod.GET => shmuckerGet(r)
-      case HttpMethod.POST => shmuckerPost(r)
+      case Method.GET => shmuckerGet(r)
+      case Method.POST => shmuckerPost(r)
       case _ => Response("Method not allowed", Array(), 405)
     }
   }

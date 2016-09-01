@@ -20,7 +20,7 @@ class JettyServer(port: Int, handler: (Request) => Response) {
         takeWhile(_ != null).
         mkString("\n")
 
-      val method = HttpMethod.fromString(r.getMethod)
+      val method = Method.fromString(r.getMethod)
       if (method.isEmpty) {
         None
       }
