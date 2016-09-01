@@ -1,11 +1,11 @@
-package wingnut
+package linkypants
 
 import com.typesafe.scalalogging.Logger
 import org.slf4j.LoggerFactory
 
-import wingnut.http._
-import wingnut.http.HttpMethod
-import wingnut.jetty.JettyServer
+import siesta.http._
+import siesta.http.HttpMethod
+import siesta.jetty.JettyServer
 
 import com.linkypants.view
 

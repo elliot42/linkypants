@@ -1,4 +1,4 @@
-package wingnut.jetty
+package siesta.jetty
 
 import javax.servlet.http.HttpServlet
 import javax.servlet.http.HttpServletRequest
@@ -9,7 +9,7 @@ import org.eclipse.jetty.server.{Request => JettyRequest}
 import org.eclipse.jetty.server.Server
 import org.eclipse.jetty.server.handler.AbstractHandler
 
-import wingnut.http._
+import siesta.http._
 
 class JettyServer(port: Int, handler: (Request) => Response) {
   class JettyHandler extends AbstractHandler {

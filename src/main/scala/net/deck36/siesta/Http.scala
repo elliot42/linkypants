@@ -1,4 +1,4 @@
-package wingnut.http
+package siesta.http
 
 import javax.servlet.http.Cookie
 
